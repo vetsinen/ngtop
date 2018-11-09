@@ -1,3 +1,9 @@
+<div class="sorting">
+  <button (click)="this.photos=this.res['default']">default</button>
+  <button (click)="this.photos=this.res['bysize']">by size</button>
+  <button (click)="this.photos=this.res['byfilename']">by filename</button>
+  <button (click)="this.photos=this.res['bynamelength']">by namelength</button>
+</div>
 <div style="display: flex; flex-wrap: wrap">
   <div *ngFor="let photo of photos"
     class="cell" style="max-width: 200px; border: none; margin: 3px">

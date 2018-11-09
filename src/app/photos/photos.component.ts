@@ -271,5 +271,4 @@ export class PhotosComponent implements OnInit {
       "name": "paulo-mergulhao-1121662-unsplash.jpg"
     }
   ];
-
 }
