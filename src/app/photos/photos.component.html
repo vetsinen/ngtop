@@ -1,7 +1,7 @@
 <div style="display: flex; flex-wrap: wrap">
   <div *ngFor="let photo of photos"
-    class="cell" style="max-width: 200px; border: solid">
-    <img [src]="photo" style="max-width: 100%; height: auto">
+    class="cell" style="max-width: 200px; border: none; margin: 3px">
+    <img [src]="photo.url" style="max-width: 100%; height: auto; margin: 0">
   </div>
 
 </div>
