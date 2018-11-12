@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PhotosComponent } from './photos/photos.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NotImplementedComponent } from './not-implemented/not-implemented.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotosComponent
+    PhotosComponent,
+    NotImplementedComponent
   ],
   imports: [
     BrowserModule,
