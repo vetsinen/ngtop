@@ -1,0 +1,20 @@
+html, body, .main, .menu,.content {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body, .main, .menu {
+  height: 100%;
+}
+.menu {
+  position: fixed;
+  float: left;
+  width: 12%;
+  background-color: cornflowerblue;
+}
+
+.content {
+  float: left;
+  margin-left: 12%;
+  width: 88%;
+}
