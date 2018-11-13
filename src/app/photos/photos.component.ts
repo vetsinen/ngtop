@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
-
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {GetDataService} from "../get-data.service";
 
 @Component({
   selector: 'app-photos',
@@ -10,19 +10,22 @@ import { HttpClient} from '@angular/common/http'
 export class PhotosComponent implements OnInit {
   url = 'https://vetsinen.github.io/photobase/base.json';
   res;
-  photos=[];
+  photos = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private getData: GetDataService) {
+  }
 
+  getPromise() {
+    return this.http.get(this.url);
   }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(res => {
+    this.getData.query().subscribe(res => {
       this.res = res;
       this.photos = res['default'];
-      console.log(res);
     });
   }
+
   protos = [
     {
       "size": 24540,
