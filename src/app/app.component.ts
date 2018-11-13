@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GetDataService} from "./get-data.service";
 
 @Component({
@@ -7,15 +7,15 @@ import {GetDataService} from "./get-data.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  size:number=undefined;
+  size: number;
   title = 'ngtop';
 
-  constructor(private getData:GetDataService){
+  constructor(private getData: GetDataService) {
   }
-  ngOnInit(){
+
+  ngOnInit() {
     this.getData.query().subscribe(res => {
       this.size = res['bytes'];
-      console.log('size resolved');
     });
   }
 }
